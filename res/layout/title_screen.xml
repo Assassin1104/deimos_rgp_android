@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:padding="20dp" >
+
+    <TextView
+        android:id="@+id/tvMainHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name" />
+
+    <Button
+        android:id="@+id/bMainPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Play" />
+
+    <Button
+        android:id="@+id/bStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bMainPlay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Status" />
+
+    <Button
+        android:id="@+id/bBattleLog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Battle Log" />
+
+    <Button
+        android:id="@+id/bInventory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bBattleLog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Inventory" />
+
+    <Button
+        android:id="@+id/bBattle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bInventory"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Battle" />
+
+    <Button
+        android:id="@+id/bCreateHero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Create Hero" />
+
+    <Button
+        android:id="@+id/bDeleteGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bCreateHero"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Delete Game" />
+
+    <Button
+        android:id="@+id/bXmlTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bDeleteGame"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/wood_bttn_bg"
+        android:text="Xml Test" />
+
+</RelativeLayout>

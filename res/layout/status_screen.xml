@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tvStatus_TitleBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/dark_grey"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="@string/status"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/ivStatus"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/tvStatus_TitleBanner"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/knight_male_front1" />
+
+        <TableLayout
+            android:id="@+id/tlStatus_Class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tvStatus_TitleBanner"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Class: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="Shadow Knight"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tlStatus_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Class"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Name: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="Player"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tlStatus_Level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Name"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Lvl: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tlStatus_Health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Level"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Health: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:paddingLeft="10dp"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <ProgressBar
+            android:id="@+id/progBar_Status_Health"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Health"
+            android:layout_marginLeft="5dp"
+            android:layoutDirection="ltr"
+            android:progressDrawable="@drawable/health_progbar" />
+
+        <TableLayout
+            android:id="@+id/tlStatus_Energy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/progBar_Status_Health"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Energy: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:paddingLeft="7dp"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <ProgressBar
+            android:id="@+id/progBar_Status_Energy"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Energy"
+            android:layout_marginLeft="5dp"
+            android:layoutDirection="ltr"
+            android:progressDrawable="@drawable/energy_progbar" />
+
+        <TableLayout
+            android:id="@+id/tlStatus_Mana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/progBar_Status_Energy"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Mana: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Mana"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:paddingLeft="15dp"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <ProgressBar
+            android:id="@+id/progBar_Status_Mana"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Mana"
+            android:layout_marginLeft="5dp"
+            android:layoutDirection="ltr"
+            android:progressDrawable="@drawable/mana_progbar" />
+
+        <TableLayout
+            android:id="@+id/tlStatus_Exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/progBar_Status_Mana"
+            android:layout_marginBottom="5dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Exp: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Exp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:paddingLeft="27dp"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+
+        <ProgressBar
+            android:id="@+id/progBar_Status_Exp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="100dp"
+            android:layout_height="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/tlStatus_Exp"
+            android:layout_marginLeft="5dp"
+            android:layoutDirection="ltr"
+            android:progressDrawable="@drawable/exp_progbar" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tvStatus_TitleBanner"
+            android:padding="10dp" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Attack: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Attack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Magic: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Magic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="PhDefense: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_PhDefense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dp"
+                    android:text="MgDefense: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_MgDefense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Agility: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Agility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="Dexterity: "
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tvStatus_Dexterity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="2"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</ScrollView>
